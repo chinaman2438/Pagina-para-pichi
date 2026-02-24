@@ -1,0 +1,10 @@
+- Titanio grado III.
+- Permiso FDA y COFEPRIS.
+- Los tornillos se sujetan de manera adecuada a la hoja del desarmador y se minimiza el riesgo de caerse.
+- Placas y tornillos de bajo perfil que minimizan la palpabilidad del paciente.
+- Innovador diseÃÂÃÂÃÂÃÂ±o de tornillo que permite un torque de inserciÃÂÃÂÃÂÃÂ³n bajo.
+- Bordes redondeados en las placas disminuyen la irritaciÃÂÃÂÃÂÃÂ³n del tejido suave.
+- Tornillos autoperforantes de 4mm, 5 mm y 6 mm.
+- Mallas para craneoplastÃÂÃÂÃÂÃÂ­a rÃÂÃÂÃÂÃÂ­gidas de espesor. 0.6mm. Grado de Titanio III.
+- Mallas planas y precontorneadas para una colocaciÃÂÃÂÃÂÃÂ³n mÃÂÃÂÃÂÃÂ¡s fÃÂÃÂÃÂÃÂ¡cil de la misma.
+- Medidas de mallas: 50x50mm, 100x100mm, 100x150mm, 150x150mm.

@@ -1,0 +1,7 @@
+- Cirugía de reconstrucción mandibular.
+- Cirugía ortognática.
+- Cientos de configuraciones posibles.
+- Grosor de diferentes tamaños.
+- Perfil bajo y borde redondeado para minimizar la irritación.
+- Compatible con tornillos de 1.6 mm / 2.0 mm y 2.4 mm (no combinables).
+- Biocompatibilidad y Bioseguridad. (Biobsorb)

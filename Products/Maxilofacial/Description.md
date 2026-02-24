@@ -1,0 +1,10 @@
+- Todos los tornillos son compatibles y trabajan con placas dentro de cada sistema.
+- Permiso FDA y COFEPRIS.
+- Los tornillos se sujetan de manera adecuada a la hoja del desarmador y se minimiza el riesgo de caerse.
+- Innovador diseÃÂÃÂÃÂÃÂ±o de tornillo que permite un torque de inserciÃÂÃÂÃÂÃÂ³n bajo.
+- CodificaciÃÂÃÂÃÂÃÂ³n de color de placas y tornillos garantiza su fÃÂÃÂÃÂÃÂ¡cil identificaciÃÂÃÂÃÂÃÂ³n.
+- Bordes redondeados en las placas disminuyen la irritaciÃÂÃÂÃÂÃÂ³n del tejido suave.
+- Placas reversibles permiten tener un menor inventario.
+- La hoja de desarmador sirve para todos los tornillos de cada sistema.
+- Placas en 2 perfiles 0.8 en verde y 1.0 en dorado.
+- El sistema maneja tornillos autoperforantes y autoroscantes de diversos tamaÃÂÃÂÃÂÃÂ±os.

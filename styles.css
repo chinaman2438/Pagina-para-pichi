@@ -1,0 +1,817 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Kingfisher Medical Brand Guidelines Implementation
+   Colors, Typography, Forms, and Composition adapted for Distri-Med
+   ========================================================================== */
+
+:root {
+  /* Primary Colors */
+  --primary-navy: #1A3A8F;
+  --secondary-charcoal: #2A2A2A;
+  --near-black: #1C1C1C;
+  --pure-white: #FFFFFF;
+
+  /* Accent Colors */
+  --accent-purple: #6B3FA0;
+  --alert-red: #CC2929;
+  --caution-yellow: #F5C800;
+  --action-green: #4A8C3F;
+
+  /* Neutrals */
+  --text-body: #2D2D2D;
+  --text-muted: #6B6B6B;
+  --divider-gray: #E0E0E0;
+  --input-border: #D0D0D0;
+  --bg-light: #F9F9F9;
+
+  /* Overlays */
+  --duochrome-overlay: rgba(20, 40, 90, 0.55);
+
+  /* Typography */
+  --font-family-primary: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  color: var(--text-body);
+  background-color: var(--pure-white);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-navy);
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Typography Hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--secondary-charcoal);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--pure-white);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+/* Purple Accent Line per Guidelines */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--accent-purple);
+  margin: 16px auto 0;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--primary-navy);
+  color: var(--pure-white);
+  border-radius: 4px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+}
+
+.btn-primary:hover {
+  background: #122a6e;
+  color: white;
+}
+
+.btn-secondary {
+  background: var(--secondary-charcoal);
+  color: var(--pure-white);
+  border-radius: 4px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+}
+
+.btn-secondary:hover {
+  background: var(--near-black);
+  color: white;
+}
+
+.btn-dark-cta {
+  background: var(--near-black);
+  color: var(--pure-white);
+  border-radius: 0;
+  padding: 14px 32px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.btn-dark-cta:hover {
+  background: #000;
+}
+
+/* Whatsapp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Structural Elements (Landing Page Creator logic)
+   ========================================================================== */
+
+/* Navigation */
+.main-nav {
+  background: transparent;
+  color: var(--pure-white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.main-nav.scrolled {
+  background: var(--primary-navy);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-logo h2 {
+  color: var(--pure-white);
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--pure-white);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--secondary-charcoal);
+  min-width: 220px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  transform: translateY(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #B0B0B0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-menu li a:hover {
+  background: var(--near-black);
+  color: var(--pure-white);
+}
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  padding-bottom: 60px;
+  /* Dark accident-scene photo effect base */
+  background-color: var(--primary-navy);
+}
+
+/* Swiper styling for Hero */
+.hero-swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.7) 0%, rgba(9, 14, 23, 0.9) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--pure-white);
+  max-width: 700px;
+  padding-top: 80px;
+  /* Use padding to prevent margin collapse tearing the top background */
+  margin-top: 0;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--accent-purple);
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-eyebrow {
+  display: inline-block;
+  background: var(--accent-purple);
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin-right: auto;
+  margin-left: 20px;
+  color: var(--pure-white);
+}
+
+@media (max-width: 900px) {
+  .nav-eyebrow {
+    display: none;
+  }
+}
+
+.hero-subheadline {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero-trust {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1.5rem;
+}
+
+.hero-trust p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.trust-logos {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.trust-logos img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Hero product float removed as requested */
+
+/* 2. PROBLEM-AGITATE (Featured Products) */
+.featured-products {
+  background: var(--bg-light);
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.product-card {
+  background: var(--pure-white);
+  border: 1px solid var(--divider-gray);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-image {
+  height: 220px;
+  background: var(--pure-white);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--divider-gray);
+}
+
+.card-image img {
+  max-height: 100%;
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.card-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-link {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  color: var(--primary-navy);
+}
+
+.card-link::after {
+  content: '→';
+  margin-left: 5px;
+  transition: transform 0.2s ease;
+}
+
+.card-link:hover::after {
+  transform: translateX(5px);
+}
+
+/* 3. VALUE STACK (Category Grid) */
+.categories {
+  background: var(--pure-white);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.category-item-img {
+  display: block;
+  border: 1px solid var(--divider-gray);
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+  background: var(--pure-white);
+  height: 100%;
+}
+
+.category-item-img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-color: var(--primary-navy);
+}
+
+.category-item-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--accent-purple);
+}
+
+.category-item-img h4 {
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--secondary-charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.category-item:hover {
+  border-color: var(--primary-navy);
+}
+
+.cat-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  background: var(--bg-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-icon img {
+  width: 32px;
+}
+
+.category-item h4 {
+  font-size: 0.95rem;
+  color: var(--secondary-charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 4. SOCIAL PROOF & STATS BANNER */
+.stats-banner {
+  background-color: var(--secondary-charcoal);
+  background-image: url("Products/Maxilofacial/sistemas-maxilofacial-distrimed.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: var(--pure-white);
+  text-align: center;
+}
+
+.stats-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Duochrome effect specific to banners per guidelines */
+  background: rgba(26, 58, 143, 0.85);
+  /* Navy wash */
+  z-index: 1;
+}
+
+.stats-content {
+  position: relative;
+  z-index: 2;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-item h3 {
+  color: var(--pure-white);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Certifications */
+.cert-section {
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-section img {
+  height: 80px;
+}
+
+/* 5. SECONDARY CTA (Contact Form) */
+.contact-section {
+  background: var(--pure-white);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  color: var(--text-body);
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+}
+
+.contact-methods {
+  margin-top: 2rem;
+}
+
+.contact-methods div {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-methods strong {
+  min-width: 30px;
+  color: var(--secondary-charcoal);
+}
+
+/* Clinical Form Styles per Brand Guidelines */
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 500px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: 1px solid var(--input-border);
+  border-radius: 2px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: var(--text-body);
+  background: var(--pure-white);
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-navy);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* 6. FOOTER */
+.site-footer {
+  background: var(--bg-light);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--divider-gray);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--primary-navy);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--divider-gray);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Mobile Nav Toggle (Hidden on Desktop) */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+}

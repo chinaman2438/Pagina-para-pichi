@@ -1,0 +1,3 @@
+- Sistema especializado para fragmentos ÃÂÃÂÃÂÃÂ³seos, diseÃÂÃÂÃÂÃÂ±ado para fracturas en clavÃÂÃÂÃÂÃÂ­cula, hÃÂÃÂÃÂÃÂºmero, codo, tibia y peronÃÂÃÂÃÂÃÂ©.
+- Incluye tornillos de varios tipos: corticales, bloqueados, cÃÂÃÂÃÂÃÂ³nicos y canulados, con diÃÂÃÂÃÂÃÂ¡metros de 2.4, 2.8, 3.5 y 3.7 mm, adaptados a diferentes zonas anatÃÂÃÂÃÂÃÂ³micas.
+- DiseÃÂÃÂÃÂÃÂ±o de tornillos avanzado, con punta autorroscante, cabeza cÃÂÃÂÃÂÃÂ³nica o redondeada y encaje tipo ÃÂÃÂ¢ÃÂÃÂÃÂÃÂstardriveÃÂÃÂ¢ÃÂÃÂÃÂÃÂ para facilitar la inserciÃÂÃÂÃÂÃÂ³n y remociÃÂÃÂÃÂÃÂ³n.

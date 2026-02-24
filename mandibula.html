@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISTRI-MED | Mandíbula</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npmáswiper@10/swiper-bundle.min.css" />
+    <style>
+        .product-page-hero {
+            padding: 9rem 0 3rem;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .product-page-title {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 4rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .product-gallery,
+        .product-info {
+            min-width: 0;
+        }
+
+        /* Simple swiper for product images */
+        .product-swiper {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-swiper .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+        }
+
+        .product-swiper .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-desc {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-body);
+        }
+
+        .product-desc ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-desc li {
+            margin-bottom: 0.8rem;
+        }
+
+        .brochure-btn {
+            margin-top: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo" style="margin-left: -40px;">
+                <img src="Brand logos/Distrimed logo.png" alt="Distri-Med Logo" class="nav-img-logo"
+                    style="max-height: 70px; width: auto; margin-top: 5px;">
+            </a>
+
+            <span class="nav-eyebrow">Único importador de Osteonic en México</span>
+
+<button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="index.html#sistemas">Sistemas <i class="fas fa-chevron-down"
+                            style="font-size: 0.8em; margin-left: 4px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <!-- Alphabetic order as requested -->
+                        <li><a href="biobsorb.html">Biobsorb</a></li>
+                        <li><a href="craniorehab.html">Craniorehab</a></li>
+                        <li><a href="mandibula.html">Mandíbula</a></li>
+                        <li><a href="maxilofacial.html">Maxilofacial</a></li>
+                        <li><a href="neuro.html">Neuro</a></li>
+                        <li><a href="signex-3-5.html">Signex 3.5</a></li>
+                        <li><a href="signex-5-0.html">Signex 5.0</a></li>
+                        <li><a href="signex-canulado.html">Signex Canulado</a></li>
+                        <li><a href="signex-mano.html">Signex Mano</a></li>
+                        <li><a href="signex-pie.html">Signex Pie</a></li>
+                        <li><a href="signex-radio-distal.html">Signex Radio Distal</a></li>
+                        <li><a href="su-por.html">Su-por</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#nosotros">Nosotros</a></li>
+                <li><a href="index.html#contacto"
+                        style="background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 4px;">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="product-page-hero">
+        <div class="container">
+            <h1 class="product-page-title">Mandíbula</h1>
+            <p style="color: var(--text-muted); font-size: 1.1rem;">Sistemas Avanzados y Soluciones Quirúrgicas</p>
+        </div>
+    </header>
+
+    <section class="container product-container">
+        <div class="product-gallery">
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="Products/Mandíbula/distrimed-mandibula-2.jpg" alt="Mandíbula"></div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h2>Descripción del Sistema</h2>
+            <div class="product-desc">
+                <ul><li>Cirugía de reconstrucción mandibular.</li>
+<li>Cirugía ortognática.</li>
+<li>Cientos de configuraciones posibles.</li>
+<li>Grosor de diferentes tamaños.</li>
+<li>Perfil bajo y borde redondeado para minimizar la irritación.</li>
+<li>Compatible con tornillos de 1.6 mm / 2.0 mm y 2.4 mm (no combinables).</li>
+<li>Biocompatibilidad y Bioseguridad. (Biobsorb)</li>
+</ul>
+            </div>
+
+            <a href="#" target="_blank" class="btn btn-primary brochure-btn">
+                <i class="fas fa-file-pdf"></i> Descargar Brochure Oficial
+            </a>
+        </div>
+    </section>
+
+    <!-- 5. SECONDARY CTA (Contact Form for Scrollers) -->
+    <section class="section-padding contact-section" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Solicite su Cotización</h2>
+
+            <div class="contact-layout">
+                <!-- Info Column -->
+                <div class="contact-info">
+                    <h3>DISTRI-MED S de RL de CV</h3>
+                    <p>Nuestra prioridad es la salud y la satisfacción de nuestros clientes. Póngase en contacto con
+                        nuestro equipo de ventas especializadas para obtener asesoría técnica sobre cualquier sistema.
+                    </p>
+
+                    <div class="contact-methods">
+                        <div>
+                            <strong><i class="fas fa-phone"
+                                    style="color: var(--primary-navy); font-size: 1.1em;"></i></strong>
+                            <span>(55) 6795 9033 <br> (55) 3475 2256</span>
+                        </div>
+                        <div>
+                            <strong><i class="fas fa-envelope"
+                                    style="color: var(--primary-navy); font-size: 1.1em;"></i></strong>
+                            <span>tecnovigilancia@distri-med.com.mx</span>
+                        </div>
+                        <div>
+                            <strong><i class="fas fa-clock"
+                                    style="color: var(--primary-navy); font-size: 1.1em;"></i></strong>
+                            <span>Horario de Atención: 24/7 para emergencias hospitalarias</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="form-container">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa">Organización / Hospital *</label>
+                                <input type="text" id="empresa" name="empresa" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cargo">Cargo / Especialidad Médica</label>
+                                <input type="text" id="cargo" name="cargo">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="producto">Producto o Sistema de Interés</label>
+                            <select id="producto" name="producto">
+                                <option value="">Seleccione una opción...</option>
+
+                                <optgroup label="Su-por">
+                                    <option value="su-por">Su-por</option>
+                                </optgroup>
+
+                                <optgroup label="Craniorehab">
+                                    <option value="craniorehab">Craniorehab</option>
+                                </optgroup>
+
+                                <optgroup label="Osteonic">
+                                    <option value="osteonic-signex-mano">Signex Mano</option>
+                                    <option value="osteonic-signex-radio-distal">Signex Radio Distal</option>
+                                    <option value="osteonic-signex-pie">Signex Pie</option>
+                                    <option value="osteonic-signex-canulado">Signex Canulado</option>
+                                    <option value="osteonic-signex-3-5">Signex 3.5</option>
+                                    <option value="osteonic-signex-5-0">Signex 5.0</option>
+                                    <option value="osteonic-neuro">Neuro</option>
+                                    <option value="osteonic-mandibula">Mandíbula</option>
+                                    <option value="osteonic-biobsorb">Biobsorb</option>
+                                    <option value="osteonic-maxilofacial">Maxilofacial</option>
+                                </optgroup>
+
+                                <option value="otro">Otro / Información General</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark-cta">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="Brand logos/Distrimed logo.png" alt="Distri-Med Logo"
+                        style="height: 60px; filter: grayscale(1); opacity: 0.8; margin-bottom: 0.5rem; margin-left: -5px;">
+                    <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 80%;">Soluciones médicas avanzadas
+                        e integrales para quirófano. Garantía de innovación mundial con certificación.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Catálogo Rápido</h4>
+                    <ul class="footer-links">
+                        <li><a href="Brochures/CATALOGO-OSTEONIC-MAXILOFACIAL-ESPANOL.pdf" target="_blank">Osteonic
+                                Maxilofacial</a></li>
+                        <li><a href="Brochures/CATALOGO-SU-POR.pdf" target="_blank">Su-Por Implantes</a></li>
+                        <li><a href="Brochures/CranioRehab-Overview-Intl-Full-2411-Open-1.pdf"
+                                target="_blank">Craniorehab CPM</a></li>
+                        <li><a href="Brochures/CATALOGO-OSTEONIC-RADIO-DISTAL-ESPANOL.pdf" target="_blank">Signex
+                                Ortopedia</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#nosotros">Acerca de Nostros</a></li>
+                        <li><a href="#">Distribuidores</a></li>
+                        <li><a href="#">Eventos y Talleres</a></li>
+                        <li><a href="#">Aviso de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom"
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
+                <p>&copy; 2026 Distri-Med S de RL de CV. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npmáswiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.product-swiper', {
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            autoplay: { delay: 3000, disableOnInteraction: false }
+        });
+
+        const btn = document.querySelector('.mobile-toggle');
+        const menu = document.querySelector('.nav-links');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                if (menu.style.display === 'flex') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'flex';
+                    menu.style.flexDirection = 'column';
+                    menu.style.position = 'absolute';
+                    menu.style.top = '70px';
+                    menu.style.left = '0';
+                    menu.style.width = '100%';
+                    menu.style.background = 'var(--primary-navy)';
+                    menu.style.padding = '1rem 0';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

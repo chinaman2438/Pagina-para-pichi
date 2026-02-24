@@ -1,0 +1,10 @@
+- Alta Los tornillos se sujetan de manera adecuada a la hoja del desarmador y se minimiza el riesgo de caerse.
+- FijaciÃÂÃÂÃÂÃÂ³n de pequeÃÂÃÂÃÂÃÂ±os fragmentos; distal y falanges medias.
+- Fracturas y osteotomÃÂÃÂÃÂÃÂ­as de las falanges y metacarpianos.
+- Fracturas de las falanges, metacarpianos y huesos de la muÃÂÃÂÃÂÃÂ±eca.
+- Fracturas de los metacarpianos, huesos de la muÃÂÃÂÃÂÃÂ±eca y radio distal.
+- Tornillos de bloqueo con ÃÂÃÂÃÂÃÂ¡ngulo variable pueden ser multidireccionalmente angulados hasta 15 grados.
+- Tornillos de bloqueo con ÃÂÃÂÃÂÃÂ¡ngulo variable pueden ser utilizados varias veces.
+- La codificaciÃÂÃÂÃÂÃÂ³n por color de los tornillos permite la fÃÂÃÂÃÂÃÂ¡cil identificaciÃÂÃÂÃÂÃÂ³n de los mismos.
+- El diseÃÂÃÂÃÂÃÂ±o de la cabeza del tornillo en forma de estrella asegura la inserciÃÂÃÂÃÂÃÂ³n estable con la fuerza suficiente.
+- Tornillos corticales y bloqueados.

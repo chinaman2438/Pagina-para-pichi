@@ -1,0 +1,10 @@
+- Cuatro tipos de tamaÃÂÃÂÃÂÃÂ±os de cabeza para acomodarse de la mejor manera a las condiciones anatÃÂÃÂÃÂÃÂ³micas del paciente.
+- Todos los hoyos de las placas son compatibles con tornillos bloqueados y corticales.
+- Las placas y tornillos estÃÂÃÂÃÂÃÂ¡n hechos del material mÃÂÃÂÃÂÃÂ¡s biocompatible, titanio puro.
+- CodificaciÃÂÃÂÃÂÃÂ³n de color de placas y tornillos garantiza su fÃÂÃÂÃÂÃÂ¡cil identificaciÃÂÃÂÃÂÃÂ³n.
+- Bordes redondeados en las placas disminuyen la irritaciÃÂÃÂÃÂÃÂ³n del tejido suave.
+- Las placas precontorneadas y los tornillos proporcionan estabilidad multidireccional angular en diferentes tipos de fractura.
+- AngulaciÃÂÃÂÃÂÃÂ³n variable de ÃÂÃÂÃÂÃÂ± 15 grados.
+- Tornillos corticales y bloqueados.
+- La hoja de desarmador y los tornillos se sujetan de manera adecuada y se minimiza el riesgo de caerse
+- Permiso FDA y COFEPRIS.

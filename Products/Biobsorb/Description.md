@@ -1,0 +1,7 @@
+- Alta resistencia.
+- Permiso FDA y COFEPRIS.
+- La fuerza se mantiene durante16 semanas.
+- Biodegradable en 12 a 24 meses.
+- No se necesita de una segunda cirugía para remover el implante.
+- La hoja de desarmador toma los tornillos 1.6 y 2.0.
+- Cabeza de tornillo en cruz.

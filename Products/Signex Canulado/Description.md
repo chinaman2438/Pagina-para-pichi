@@ -1,0 +1,7 @@
+- Sistema 2.2 y 3.0.
+- Cuerda corta y cuerda larga.
+- Dos tipos de tamaÃÂÃÂÃÂÃÂ±os de cabeza para acomodarse de la mejor manera a las condiciones anatÃÂÃÂÃÂÃÂ³micas del paciente.
+- Gran variedad de longitud de tornillos cubren mucho rango de las indicaciones.
+- Tornillos con rosca de alta precisiÃÂÃÂÃÂÃÂ³n que viene de un proceso de fabricaciÃÂÃÂÃÂÃÂ³n de alta precisiÃÂÃÂÃÂÃÂ³n.
+- El diseÃÂÃÂÃÂÃÂ±o de la cabeza del tornillo en forma de estrella asegura la inserciÃÂÃÂÃÂÃÂ³n estable a la hoja del desarmador.
+- Permiso FDA y COFEPRIS.

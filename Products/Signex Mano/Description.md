@@ -1,0 +1,5 @@
+- Alta Los tornillos se sujetan de manera adecuada a la hoja del desarmador y se minimiza el riesgo de caerse.
+- FijaciÃÂÃÂÃÂÃÂ³n de pequeÃÂÃÂÃÂÃÂ±os fragmentos; distal y falanges medias.
+- Fracturas y osteotomÃÂÃÂÃÂÃÂ­as de las falanges y metacarpianos.
+- Fracturas de las falanges, metacarpianos y huesos de la muÃÂÃÂÃÂÃÂ±eca.
+- Fracturas de los metacarpianos, huesos de la muÃÂÃÂÃÂÃÂ±eca y radio distal.
