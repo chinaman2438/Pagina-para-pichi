@@ -40,7 +40,7 @@ function updateLogosInFile(filePath) {
 
     // 2. Update Nav Logo (Move more to the left)
     const oldNavLogo1 = `<a href="#" class="nav-logo" style="margin-left: -20px;">`;
-    const newNavLogo1 = `<a href="#" class="nav-logo" style="margin-left: -40px;">`;
+    const newNavLogo1 = `<a href="#" class="nav-logo">`;
 
     if (fileContent.includes(oldNavLogo1)) {
         fileContent = fileContent.replace(oldNavLogo1, newNavLogo1);
@@ -48,7 +48,7 @@ function updateLogosInFile(filePath) {
     }
 
     const oldNavLogo2 = `<a href="index.html" class="nav-logo">`;
-    const newNavLogo2 = `<a href="index.html" class="nav-logo" style="margin-left: -40px;">`;
+    const newNavLogo2 = `<a href="index.html" class="nav-logo">`;
 
     if (fileContent.includes(oldNavLogo2)) {
         fileContent = fileContent.replace(oldNavLogo2, newNavLogo2);
@@ -74,3 +74,4 @@ fs.readdir(directoryPath, (err, files) => {
         }
     });
 });
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -14,7 +14,7 @@
     <!-- Icons (for floating whatsapp and placeholders) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npmáswiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     <nav class="main-nav">
         <!-- Moved logo slightly to the left by applying a negative margin-left -->
         <div class="container nav-container">
-            <a href="#" class="nav-logo" style="margin-left: -40px;">
+            <a href="#" class="nav-logo">
                 <img src="Brand logos/Distrimed logo.png" alt="Distri-Med Logo" class="nav-img-logo"
                     style="max-height: 70px; width: auto; margin-top: 5px;">
             </a>
@@ -67,31 +67,28 @@
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
             <div class="swiper hero-swiper">
                 <div class="swiper-wrapper">
-                    <!-- Slide 1: Su-Por -->
+                    <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <img src="Products/Su-por/img1.jpg" alt="Su-Por Implantes" class="hero-bg-image">
-                        <div class="hero-overlay"></div>
-                    </div>
-                    <!-- Slide 2: Craniorehab -->
-                    <div class="swiper-slide">
-                        <img src="Products/Craniorehab/nplane.jpg" alt="Craniorehab" class="hero-bg-image">
-                        <div class="hero-overlay"></div>
-                    </div>
-                    <!-- Slide 3: Osteonic - Radio Distal -->
-                    <div class="swiper-slide">
-                        <img src="Products/Signex%20Radio%20Distal/distrimed-radio-muneca-1.jpg"
-                            alt="Signex Radio Distal" class="hero-bg-image">
-                        <div class="hero-overlay"></div>
-                    </div>
-                    <!-- Slide 4: Osteonic - Maxilofacial -->
-                    <div class="swiper-slide">
-                        <img src="Products/Maxilofacial/sistemas-maxilofacial-distrimed.jpg" alt="Osteonic Maxilofacial"
+                        <img src="Hero Photos/Neuroplacas-Distrimed.jpg" alt="Distri-Med Hero Image 1"
                             class="hero-bg-image">
                         <div class="hero-overlay"></div>
                     </div>
-                    <!-- Slide 5: Osteonic - Neuro -->
+                    <!-- Slide 2 -->
                     <div class="swiper-slide">
-                        <img src="Products/Neuro/Neuroplacas-Distrimed.jpg" alt="Osteonic Neuro" class="hero-bg-image">
+                        <img src="Hero Photos/Pie-distrimed-osteonic.1.jpg" alt="Distri-Med Hero Image 2"
+                            class="hero-bg-image">
+                        <div class="hero-overlay"></div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <img src="Hero Photos/distrimed-mandibula-2.jpg" alt="Distri-Med Hero Image 3"
+                            class="hero-bg-image">
+                        <div class="hero-overlay"></div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <img src="Hero Photos/sistema-de-placas-distrimed-osteonic-1.jpg" alt="Distri-Med Hero Image 4"
+                            class="hero-bg-image">
                         <div class="hero-overlay"></div>
                     </div>
                 </div>
@@ -394,7 +391,7 @@
     </a>
 
     <!-- Simple sticky nav script for mobile (optional interaction) -->
-    <script src="https://cdn.jsdelivr.net/npmáswiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const heroSwiper = new Swiper('.hero-swiper', {
@@ -436,8 +433,9 @@
             const triggerHeight = heroSection.offsetHeight - 80;
             // Determine if passed the Nosotros section to fade out again
             const nosotrosOffset = nosotrosSection ? nosotrosSection.offsetTop - 100 : Infinity;
+            const nosotrosBottom = nosotrosSection ? (nosotrosSection.offsetTop + nosotrosSection.offsetHeight - 100) : Infinity;
 
-            if (window.scrollY > triggerHeight && window.scrollY < nosotrosOffset) {
+            if ((window.scrollY > triggerHeight && window.scrollY < nosotrosOffset) || window.scrollY > nosotrosBottom) {
                 mainNav.classList.add('scrolled');
             } else {
                 mainNav.classList.remove('scrolled');
@@ -447,3 +445,4 @@
 </body>
 
 </html>
+

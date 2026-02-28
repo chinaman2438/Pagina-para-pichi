@@ -234,6 +234,11 @@ h2 {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  max-width: 1400px;
+}
+
+.nav-logo {
+  transform: translateX(-40px);
 }
 
 .nav-logo h2 {
