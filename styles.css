@@ -322,10 +322,29 @@ h2 {
 }
 
 .hero-left {
-  flex: 1.2;
+  flex: 1.5;
+  /* Made it wider */
   text-align: left;
   padding-right: 2rem;
   color: var(--pure-white);
+}
+
+.hero-left h1.hero-headline {
+  font-size: 3rem;
+  /* Made the font smaller */
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-subheadline {
+  font-size: 1.15rem;
+  /* Slightly smaller subheadline as well */
+  margin: 1.5rem 0 2.5rem;
+  font-weight: 300;
+  /* Thinner font matches the reference better */
+  opacity: 0.9;
+  max-width: 90%;
+  /* Keep it from stretching completely to the edge of the image */
 }
 
 .hero-right {
@@ -339,9 +358,7 @@ h2 {
 .hero-swiper {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   overflow: hidden;
 }
 
