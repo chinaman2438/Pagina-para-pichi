@@ -139,9 +139,9 @@ h2 {
   background: var(--primary-navy);
   color: var(--pure-white);
   border-radius: 4px;
-  padding: 12px 28px;
+  padding: 16px 36px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.03em;
 }
 
@@ -154,9 +154,9 @@ h2 {
   background: var(--secondary-charcoal);
   color: var(--pure-white);
   border-radius: 4px;
-  padding: 12px 28px;
+  padding: 16px 36px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.03em;
 }
 
