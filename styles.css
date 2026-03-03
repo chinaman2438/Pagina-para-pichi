@@ -259,6 +259,7 @@ h2 {
   list-style: none;
   gap: 2rem;
   align-items: center;
+  margin-right: 5rem;
 }
 
 .nav-links a {
@@ -384,7 +385,6 @@ h2 {
   max-width: 100%;
   max-height: 400px;
   object-fit: contain;
-  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.6));
   animation: float 6s ease-in-out infinite;
 }
 
@@ -603,7 +603,7 @@ h2 {
   /* Slightly rounder for aesthetic */
   overflow: hidden;
   text-align: center;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0s;
   background: var(--pure-white);
   height: 100%;
 }
@@ -620,7 +620,7 @@ h2 {
   height: 180px;
   object-fit: cover;
   border-bottom: 3px solid var(--accent-purple);
-  transition: transform 0.4s ease;
+  transition: transform 0s;
 }
 
 .category-item-img:hover img {
@@ -660,6 +660,18 @@ h2 {
   color: var(--secondary-charcoal);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* Scroll Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 4. SOCIAL PROOF & STATS BANNER */
