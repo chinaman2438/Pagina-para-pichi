@@ -64,7 +64,7 @@
     <!-- 1. HERO (Landing Page Creator: Get scroll. Clinical duochrome aesthetic) -->
     <header class="hero">
         <div class="container hero-container">
-            <div class="hero-left text-left">
+            <div class="hero-left text-left fade-in-up">
                 <h1 class="hero-headline">Somos <span class="highlight">soluciones médicas</span></h1>
                 <p class="hero-subheadline">Distri-Med es un proveedor confiable de equipos médicos y tecnología
                     sanitaria de alta calidad, comprometido a apoyar a hospitales, clínicas y profesionales de la salud
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="hero-right">
+            <div class="hero-right fade-in-up" style="transition-delay: 0.2s;">
                 <div class="swiper hero-swiper">
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
@@ -108,7 +108,7 @@
 
         <div class="container text-center hero-bottom">
             <!-- Trust Signals -->
-            <div class="hero-trust">
+            <div class="hero-trust fade-in-up" style="transition-delay: 1s;">
                 <p>Nuestros Partners Estratégicos</p>
                 <div class="trust-logos">
                     <!-- Updated Correct Logos from Brand logos folder -->
@@ -186,7 +186,8 @@
             <h2 style="color: white; font-size: 2.5rem; margin-bottom: 3rem;">Nosotros</h2>
 
             <div class="stats-grid" style="text-align: left;">
-                <div class="stat-item" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 8px;">
+                <div class="stat-item fade-in-up"
+                    style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 8px;">
                     <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Misión</h3>
                     <p
                         style="font-size: 0.95rem; text-transform: none; font-weight: normal; line-height: 1.6; opacity: 1;">
@@ -198,7 +199,8 @@
                         internacional para traerlas al mercado mexicano.
                     </p>
                 </div>
-                <div class="stat-item" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 8px;">
+                <div class="stat-item fade-in-up"
+                    style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 8px; transition-delay: 0.2s;">
                     <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Visión</h3>
                     <p
                         style="font-size: 0.95rem; text-transform: none; font-weight: normal; line-height: 1.6; opacity: 1;">
@@ -206,7 +208,8 @@
                         servicio de
                         calidad a un precio accesible.</p>
                 </div>
-                <div class="stat-item" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 8px;">
+                <div class="stat-item fade-in-up"
+                    style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 8px; transition-delay: 0.4s;">
                     <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Valores</h3>
                     <ul style="list-style: none; padding: 0; font-size: 0.95rem; opacity: 1;">
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
@@ -226,7 +229,8 @@
         style="background-color: var(--bg-light); text-align: center; border-bottom: 1px solid var(--divider-gray);">
         <div class="container">
             <h2 class="section-title" style="margin-bottom: 3rem;">Certificaciones de Calidad Global</h2>
-            <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center; padding-bottom: 15px;">
+            <div class="fade-in-up"
+                style="display: flex; flex-direction: column; gap: 2rem; align-items: center; padding-bottom: 15px;">
                 <!-- Top Row: 3 Logos -->
                 <div
                     style="display: flex; gap: 2rem; justify-content: center; align-items: center; flex-wrap: wrap; width: 100%;">
@@ -446,6 +450,28 @@
             } else {
                 mainNav.classList.remove('scrolled');
             }
+        });
+
+        // Intersection Observer for Slide In Animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
         });
     </script>
 </body>
