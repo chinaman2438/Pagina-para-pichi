@@ -259,7 +259,7 @@ h2 {
   list-style: none;
   gap: 2rem;
   align-items: center;
-  margin-right: 5rem;
+  margin-right: auto;
 }
 
 .nav-links a {
@@ -429,8 +429,7 @@ h2 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border-radius: 2px;
-  margin-right: auto;
-  margin-left: 20px;
+  margin: 0 2rem 0 20px;
   color: var(--pure-white);
 }
 
@@ -613,6 +612,7 @@ h2 {
   box-shadow: 0 20px 40px rgba(26, 58, 143, 0.15);
   /* primary-navy tinted shadow */
   border-color: var(--accent-purple);
+  transition: transform 0s, box-shadow 0s, border-color 0s;
 }
 
 .category-item-img img {
@@ -625,6 +625,7 @@ h2 {
 
 .category-item-img:hover img {
   transform: scale(1.05);
+  transition: transform 0s;
 }
 
 .category-item-img h4 {
