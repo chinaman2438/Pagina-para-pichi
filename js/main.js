@@ -320,19 +320,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         // Fine-tune positioning for irregularly shaped states
                         if (stateId === 'ver') {
-                            centerX -= 10;
-                            centerY += 12;
+                            centerX += 4;
+                            centerY += 34;
                         } else if (stateId === 'bcs') {
-                            centerX += 8;
-                            centerY += 25;
+                            centerX += 14;
+                            centerY -= 68;
                         } else if (stateId === 'mex') {
                             centerX -= 4;
                             centerY -= 2;
                         } else if (stateId === 'coa') {
-                            centerX += 4;
+                            centerX -= 4;
                         } else if (stateId === 'yuc') {
                             centerY -= 5;
+                        } else if (stateId === 'pue') {
+                            centerX += 2;
+                            centerY += 18;
+                        } else if (stateId === 'jal') {
+                            centerY += 10;
+                        } else if (stateId === 'son') {
+                            centerX += 32;
+                        } else if (stateId === 'gua') {
+                            centerX -= 4;
                         }
+
 
                         // Create outer pulsing glow
                         const pulseCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');

@@ -458,7 +458,7 @@ h2 {
   margin-bottom: 0;
   margin-left: 0; /* Aligns search bar precisely with the left container boundary */
   margin-right: auto;
-  max-width: 680px; /* Lengthened search bar to occupy more space */
+  max-width: 635px; /* Lengthened search bar to occupy more space */
   width: 100%;
 }
 
