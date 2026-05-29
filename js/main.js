@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoCycleInterval = setInterval(() => {
             currentBrandIndex = (currentBrandIndex + 1) % brands.length;
             switchBrand(brands[currentBrandIndex]);
-        }, 6000); // Cycle every 6 seconds
+        }, 4000); // Cycle every 3 seconds
     }
 
     function stopAutoCycle() {
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const activeStates = {
         'son': 'Sonora',
         'coa': 'Coahuila',
-        'nle': 'Monterrey (Nuevo León)',
+        'nle': 'Nuevo León',
         'jal': 'Jalisco',
         'gua': 'Guanajuato',
         'que': 'Querétaro',
@@ -366,11 +366,23 @@ document.addEventListener('DOMContentLoaded', function () {
                             mapTooltip.textContent = activeStates[stateId];
                             mapTooltip.style.display = 'block';
                             mapTooltip.style.opacity = '1';
+                            
+                            // Highlight matching list item in the side list
+                            const listItem = document.querySelector(`.states-grid-list li[data-state-id="${stateId}"]`);
+                            if (listItem) {
+                                listItem.classList.add('highlighted-list-item');
+                            }
                         });
 
                         path.addEventListener('mouseleave', () => {
                             mapTooltip.style.display = 'none';
                             mapTooltip.style.opacity = '0';
+                            
+                            // Remove highlight from matching list item
+                            const listItem = document.querySelector(`.states-grid-list li[data-state-id="${stateId}"]`);
+                            if (listItem) {
+                                listItem.classList.remove('highlighted-list-item');
+                            }
                         });
 
                         path.addEventListener('mousemove', (e) => {
@@ -379,6 +391,59 @@ document.addEventListener('DOMContentLoaded', function () {
                             const y = e.clientY - rect.top;
                             mapTooltip.style.left = `${x}px`;
                             mapTooltip.style.top = `${y - 12}px`;
+                        });
+                    }
+                });
+
+                // Attach list item hover hooks for bidirectional interactivity
+                const listItems = document.querySelectorAll('.states-grid-list li');
+                listItems.forEach(item => {
+                    const stateId = item.getAttribute('data-state-id');
+                    const path = document.getElementById(stateId);
+                    
+                    if (path) {
+                        item.addEventListener('mouseenter', () => {
+                            // Highlight corresponding SVG path
+                            path.style.fill = 'var(--secondary-blue)';
+                            path.style.filter = 'drop-shadow(0 4px 12px rgba(0, 174, 239, 0.35))';
+                            
+                            // Show Tooltip at path centroid position
+                            const bbox = path.getBBox();
+                            const svgRect = svgElement.getBoundingClientRect();
+                            const scaleX = svgRect.width / 793;
+                            const scaleY = svgRect.height / 498;
+                            
+                            // Compute centers with adjustments
+                            let pX = bbox.x + bbox.width / 2;
+                            let pY = bbox.y + bbox.height / 2;
+                            if (stateId === 'ver') { pX += 4; pY += 34; }
+                            else if (stateId === 'bcs') { pX += 14; pY -= 68; }
+                            else if (stateId === 'mex') { pX -= 4; pY -= 2; }
+                            else if (stateId === 'coa') { pX -= 4; }
+                            else if (stateId === 'yuc') { pY -= 5; }
+                            else if (stateId === 'pue') { pX += 2; pY += 18; }
+                            else if (stateId === 'jal') { pY += 10; }
+                            else if (stateId === 'son') { pX += 32; }
+                            else if (stateId === 'gua') { pX -= 4; }
+
+                            const screenX = pX * scaleX;
+                            const screenY = pY * scaleY;
+                            
+                            mapTooltip.textContent = activeStates[stateId];
+                            mapTooltip.style.display = 'block';
+                            mapTooltip.style.opacity = '1';
+                            mapTooltip.style.left = `${screenX}px`;
+                            mapTooltip.style.top = `${screenY - 12}px`;
+                        });
+                        
+                        item.addEventListener('mouseleave', () => {
+                            // Restore original SVG path styles
+                            path.style.fill = '';
+                            path.style.filter = '';
+                            
+                            // Hide tooltip
+                            mapTooltip.style.display = 'none';
+                            mapTooltip.style.opacity = '0';
                         });
                     }
                 });

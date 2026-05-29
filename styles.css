@@ -397,10 +397,10 @@ h2 {
   min-height: 100vh;
   padding: 120px 0 40px; /* Reduced padding to make everything fit within 100vh */
   background: 
-    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%),
-    radial-gradient(circle at 80% 45%, rgba(0, 174, 239, 0.16) 0%, rgba(0, 174, 239, 0) 60%),
-    radial-gradient(circle at 90% 90%, rgba(31, 44, 122, 0.08) 0%, rgba(31, 44, 122, 0) 60%),
-    #F8FAFC url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 100 0 L 0 0 0 100' fill='none' stroke='rgba(31, 44, 122, 0.018)' stroke-width='0.5'/%3E%3Cpath d='M 20 20 L 25 20 M 20 20 L 20 25 M 80 20 L 75 20 M 80 20 L 80 25 M 80 80 L 75 80 M 80 80 L 80 75 M 20 80 L 25 80 M 20 80 L 20 75' fill='none' stroke='rgba(0, 174, 239, 0.035)' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='1' fill='rgba(31, 44, 122, 0.03)'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 100 0 L 0 0 0 100' fill='none' stroke='rgba(31, 44, 122, 0.018)' stroke-width='0.5'/%3E%3Cpath d='M 20 20 L 25 20 M 20 20 L 20 25 M 80 20 L 75 20 M 80 20 L 80 25 M 80 80 L 75 80 M 80 80 L 80 75 M 20 80 L 25 80 M 20 80 L 20 75' fill='none' stroke='rgba(0, 174, 239, 0.035)' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='1' fill='rgba(31, 44, 122, 0.03)'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 80% 45%, rgba(0, 174, 239, 0.18) 0%, rgba(0, 174, 239, 0) 65%),
+    radial-gradient(circle at 15% 15%, rgba(229, 236, 242, 0.7) 0%, rgba(229, 236, 242, 0) 55%),
+    linear-gradient(135deg, #E5ECF2 0%, #C1D7F0 50%, #9AB0C7 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -425,7 +425,7 @@ h2 {
 }
 
 .hero-left h1.hero-headline {
-  font-size: clamp(2.5rem, 4.8vw, 3.8rem);
+  font-size: clamp(2rem, 3.8vw, 3rem);
   line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -458,7 +458,7 @@ h2 {
   margin-bottom: 0;
   margin-left: 0; /* Aligns search bar precisely with the left container boundary */
   margin-right: auto;
-  max-width: 635px; /* Lengthened search bar to occupy more space */
+  max-width: 566px; /* Lengthened search bar to occupy more space */
   width: 100%;
 }
 
@@ -473,16 +473,16 @@ h2 {
   display: flex;
   align-items: center;
   position: relative;
-  background: #FFFFFF;
+  /* Premium softer glass effect */
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 50px;
   padding: 6px 20px;
   height: 56px;
-  border: 1px solid transparent;
-  /* Premium double-gradient border trick */
-  background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(135deg, var(--secondary-blue), var(--current-brand-accent));
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  box-shadow: 0 10px 30px rgba(31, 44, 122, 0.04);
+  /* Reduced border intensity (delicate, transparent outline) */
+  border: 1px solid rgba(31, 44, 122, 0.08);
+  box-shadow: 0 10px 30px rgba(31, 44, 122, 0.03);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -510,8 +510,9 @@ h2 {
 
 .hero-search-bar:focus-within {
   transform: translateY(-2px);
-  box-shadow: 0 16px 36px rgba(31, 44, 122, 0.08);
-  background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(135deg, var(--primary-navy), var(--current-brand-accent));
+  box-shadow: 0 16px 36px rgba(31, 44, 122, 0.06);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(31, 44, 122, 0.2);
 }
 
 .search-bar-icon {
@@ -642,7 +643,7 @@ h2 {
 }
 
 .hero-ctas .btn-primary:hover {
-  background: #17225c;
+  background: #2b3bb5;
   box-shadow: 0 8px 20px rgba(31, 44, 122, 0.25);
   transform: translateY(-2px);
 }
@@ -695,21 +696,27 @@ h2 {
 /* Main Hero Visual (Foreground) */
 .main-hero-visual {
   position: absolute;
-  width: 80%; /* Increased from 72% to make main image bigger */
-  height: 80%; /* Increased from 72% to make main image bigger */
-  z-index: 3;
+  width: 72%; /* Decreased slightly to prevent covering secondary cards */
+  height: 72%;
+  z-index: 3; /* Positioned over both secondary photos */
   display: flex;
   align-items: center;
   justify-content: center;
   animation: float-main 8s ease-in-out infinite alternate;
   pointer-events: none;
+  /* Subtle shadow underneath + faint glow around edges */
+  filter: 
+    drop-shadow(0 25px 35px rgba(10, 15, 45, 0.25)) 
+    drop-shadow(0 0 35px rgba(0, 174, 239, 0.25));
 }
 
 .main-implant-img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 20px 40px rgba(31, 44, 122, 0.15));
+  /* Softer blending edges and slight transparency on edges to remove hard crop */
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: auto;
 }
@@ -718,30 +725,23 @@ h2 {
   transform: scale(1.05) rotate(1deg);
 }
 
-/* Glassmorphism Cards (Midground) */
+/* Glassmorphism Cards (Midground) - Now frameless and soft-blended */
 .glass-card {
   position: absolute;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px) saturate(160%);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 20px;
-  padding: 10px;
-  box-shadow: 
-    0 15px 35px -5px rgba(31, 44, 122, 0.08),
-    0 5px 15px rgba(0, 0, 0, 0.03),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 35px -5px rgba(31, 44, 122, 0.08);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
+  /* Soft blending edges that fade smoothly into the background */
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0) 100%);
 }
 
 .glass-card-inner {
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(226, 232, 240, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -756,11 +756,7 @@ h2 {
 
 .glass-card:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 
-    0 25px 45px -5px rgba(31, 44, 122, 0.12),
-    0 10px 20px rgba(0, 0, 0, 0.04),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
-  border-color: var(--current-brand-accent);
+  box-shadow: 0 25px 45px -5px rgba(31, 44, 122, 0.12);
 }
 
 .glass-card:hover img {
@@ -769,20 +765,20 @@ h2 {
 
 /* Staggered, Asymmetric Floating Positions */
 .card-secondary-1 {
-  width: 46%; /* Increased from 44% */
-  height: 200px; /* Increased from 180px */
-  top: 2%; /* Moved up from 8% to reduce overlapping */
-  left: -8%; /* Moved left from 0% so it's less blocked */
-  z-index: 1;
+  width: 46%;
+  height: 200px;
+  top: 2%;
+  left: -18%; /* Shifted left to be more visible and less covered */
+  z-index: 1; /* Sits behind the main photo */
   animation: float-card-1 10s ease-in-out infinite alternate;
 }
 
 .card-secondary-2 {
-  width: 50%; /* Increased from 48% */
-  height: 220px; /* Increased from 200px */
-  bottom: 2%; /* Moved down from 8% to reduce overlapping */
-  right: -8%; /* Moved right from 0% so it's less blocked */
-  z-index: 2;
+  width: 50%;
+  height: 220px;
+  bottom: 2%;
+  right: -18%; /* Shifted right to be more visible and less covered */
+  z-index: 1; /* Moved to back behind the main photo */
   animation: float-card-2 9s ease-in-out infinite alternate;
 }
 
@@ -838,7 +834,7 @@ h2 {
 
 /* Brand Tabs Selector */
 .hero-brand-selector {
-  border-top: 1px solid var(--border-color);
+  border-top: 2px solid rgba(31, 44, 122, 0.38); /* Thicker/darker divider to make partner logos stand out */
   padding-top: 1.5rem; /* Reduced padding slightly for better vertical layout */
   display: flex;
   flex-direction: column;
@@ -882,13 +878,13 @@ h2 {
   max-width: 100%;
   object-fit: contain;
   filter: grayscale(1);
-  opacity: 0.55;
+  opacity: 0.6; /* Increased from 0.55 for higher visibility */
   transition: all 0.3s ease;
 }
 
 .brand-tab[data-brand="craniorehab"] img {
   transform: scale(1.4);
-  opacity: 0.75;
+  opacity: 0.9; /* Increased from 0.75 for higher visibility */
 }
 
 .brand-tab:hover {
@@ -972,10 +968,12 @@ h2 {
 
   .card-secondary-1 {
     height: 140px;
+    left: -5%;
   }
 
   .card-secondary-2 {
     height: 160px;
+    right: -5%;
   }
   
   .brand-tabs {
@@ -1017,11 +1015,13 @@ h2 {
   .card-secondary-1 {
     height: 110px;
     border-radius: 14px;
+    left: -2%;
   }
 
   .card-secondary-2 {
     height: 130px;
     border-radius: 14px;
+    right: -2%;
   }
 }
 
@@ -1411,24 +1411,96 @@ img[src*="Certifications/"]:hover {
 }
 
 .map-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1.55fr 1fr; /* Increased map column ratio to make the map bigger */
+  gap: 3.5rem;
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1360px; /* Increased max-width from 1100px to make the map layout larger */
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem;
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(31, 44, 122, 0.03);
 }
 
+@media (max-width: 950px) {
+  .map-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+}
+
 .map-wrapper {
   position: relative;
   width: 100%;
   height: auto;
+}
+
+.map-states-list {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.states-grid-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+@media (max-width: 500px) {
+  .states-grid-list {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.states-grid-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.states-grid-list li {
+  display: flex;
+  align-items: center;
+  font-size: 16px; /* Increased from 13.5px to make state names bigger */
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.states-grid-list li:hover,
+.states-grid-list li.highlighted-list-item {
+  color: var(--primary-navy);
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  transform: translateX(4px);
+}
+
+.bullet-dot {
+  width: 8px; /* Increased from 6px to balance larger font size */
+  height: 8px;
+  background-color: var(--secondary-blue);
+  border-radius: 50%;
+  margin-right: 12px;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.states-grid-list li:hover .bullet-dot,
+.states-grid-list li.highlighted-list-item .bullet-dot {
+  background-color: var(--primary-navy);
+  transform: scale(1.3);
 }
 
 /* SVG Styles */
@@ -1503,5 +1575,110 @@ img[src*="Certifications/"]:hover {
   100% {
     transform: scale(2.2);
     opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   Mega Dropdown Menu Styling (Redesigned dropdown list by company columns)
+   ========================================================================== */
+.mega-dropdown {
+  position: static !important; /* Forces dropdown alignment to the main nav container width */
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 100%;
+  max-width: 1360px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 15px 45px rgba(31, 44, 122, 0.08);
+  padding: 2.25rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr; /* First column is slightly wider for 10-product list */
+  gap: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.dropdown:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.mega-menu-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-menu-column h3 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-navy);
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+.mega-menu-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu-column ul li {
+  margin-bottom: 6px;
+}
+
+.mega-menu-column ul li a {
+  display: block;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.mega-menu-column ul li a:hover {
+  color: var(--secondary-blue);
+  transform: translateX(4px);
+}
+
+/* Responsive Mega Menu for Mobile Drawer */
+@media (max-width: 900px) {
+  .mega-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border: none;
+    padding: 1rem 0;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 350px;
+    overflow-y: auto;
+  }
+  
+  .mega-menu-column h3 {
+    font-size: 10px;
+    margin-bottom: 0.5rem;
+    padding-bottom: 4px;
+  }
+  
+  .mega-menu-column ul li a {
+    font-size: 14px;
+    padding: 6px 0;
   }
 }
