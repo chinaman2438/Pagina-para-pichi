@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!mainNav) return;
         
         if (heroSection) {
-            // Home page logic
-            const triggerHeight = heroSection.offsetHeight - 80;
-            const nosotrosOffset = nosotrosSection ? nosotrosSection.offsetTop - 100 : Infinity;
-            const nosotrosBottom = nosotrosSection ? (nosotrosSection.offsetTop + nosotrosSection.offsetHeight - 100) : Infinity;
+           // Home page logic: Transparent everywhere except when over the "Nosotros" section
+		const headerHeight = mainNav.offsetHeight || 105;
+		const nosotrosOffset = nosotrosSection ? (nosotrosSection.offsetTop - headerHeight) : Infinity;
+		const nosotrosBottom = nosotrosSection ? (nosotrosSection.offsetTop + nosotrosSection.offsetHeight - headerHeight) : Infinity;
 
-            if ((window.scrollY > triggerHeight && window.scrollY < nosotrosOffset) || window.scrollY > nosotrosBottom) {
+            	if (window.scrollY >= nosotrosOffset && window.scrollY < nosotrosBottom) {
                 mainNav.classList.add('scrolled');
             } else {
                 mainNav.classList.remove('scrolled');
@@ -141,6 +141,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             if (secImg2 && brand.secondaryImages[1]) {
                 secImg2.src = brand.secondaryImages[1];
+            }
+
+            if (heroSection) {
+                heroSection.setAttribute('data-active-brand', brandName);
             }
 
             // Update the CSS variable for active brand accent
