@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoCycleInterval = setInterval(() => {
             currentBrandIndex = (currentBrandIndex + 1) % brands.length;
             switchBrand(brands[currentBrandIndex]);
-        }, 4000); // Cycle every 3 seconds
+        }, 4500); // Cycle every 4.5 seconds
     }
 
     function stopAutoCycle() {
