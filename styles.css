@@ -447,6 +447,49 @@ h2 {
   color: var(--text-secondary);
 }
 
+/* First-time Hero Load Animations */
+.anim-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: revealLetter 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes revealLetter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-subheadline.animate-sub {
+  opacity: 0;
+  transform: translate(40px, 20px); /* Slide in from bottom right */
+  animation: revealSubheadline 0.8s forwards cubic-bezier(0.16, 1, 0.3, 1);
+  animation-delay: 0.9s; /* Starts right as the letters animation is finishing */
+}
+
+@keyframes revealSubheadline {
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.hero-ctas.animate-ctas {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: revealCTAs 0.6s forwards cubic-bezier(0.16, 1, 0.3, 1);
+  animation-delay: 1.4s; /* Starts after the subheadline begins revealing */
+}
+
+@keyframes revealCTAs {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ==========================================================================
    Hero Search Bar & Navbar Search Styling
    ========================================================================== */
@@ -899,11 +942,12 @@ h2 {
   object-fit: contain;
   filter: grayscale(1);
   opacity: 0.6; /* Increased from 0.55 for higher visibility */
-  transition: all 0.3s ease;
+  transform: scale(0.85); /* Smaller by default */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .brand-tab[data-brand="craniorehab"] img {
-  transform: scale(1.4);
+  transform: scale(1.1); /* Smaller by default relative to its larger original size */
   opacity: 0.9; /* Increased from 0.75 for higher visibility */
 }
 
@@ -914,11 +958,15 @@ h2 {
 .brand-tab:hover img {
   opacity: 0.85;
   filter: grayscale(0.3);
+  transform: scale(1.0); /* Grow to normal size on hover */
+}
+.brand-tab:hover[data-brand="craniorehab"] img {
+  transform: scale(1.4); /* Grow to normal size on hover */
 }
 
 /* Active Highlight States based on product color values */
 .brand-tab.active {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .brand-tab.active[data-brand="osteonic"] {
@@ -927,6 +975,7 @@ h2 {
 .brand-tab.active[data-brand="osteonic"] img {
   filter: none;
   opacity: 1;
+  transform: scale(1.0); /* Grow to normal size when active */
 }
 
 .brand-tab.active[data-brand="supor"] {
@@ -935,6 +984,7 @@ h2 {
 .brand-tab.active[data-brand="supor"] img {
   filter: none;
   opacity: 1;
+  transform: scale(1.0); /* Grow to normal size when active */
 }
 
 .brand-tab.active[data-brand="craniorehab"] {
@@ -943,6 +993,7 @@ h2 {
 .brand-tab.active[data-brand="craniorehab"] img {
   filter: none;
   opacity: 1;
+  transform: scale(1.4); /* Grow to normal size when active */
 }
 
 @media (max-width: 900px) {
@@ -1104,7 +1155,7 @@ h2 {
 }
 
 .category-item-img:hover img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 /* Osteonic cards hover */
@@ -1203,7 +1254,7 @@ img[src*="Certifications/"] {
 }
 
 img[src*="Certifications/"]:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 
 /* ==========================================================================

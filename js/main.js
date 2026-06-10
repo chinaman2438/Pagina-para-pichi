@@ -1,4 +1,62 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // 0. FIRST-TIME HERO TEXT ANIMATIONS
+    const headline = document.querySelector('.hero-headline');
+    const subheadline = document.querySelector('.hero-subheadline');
+    const heroLeft = document.querySelector('.hero-left');
+    const heroCtas = document.querySelector('.hero-ctas');
+
+    if (headline && subheadline && heroLeft) {
+        // Remove fade-in-up from container to avoid nested animation clashes
+        heroLeft.classList.remove('fade-in-up');
+        heroLeft.classList.add('visible');
+
+        // Split the headline text into characters
+        const originalHTML = headline.innerHTML;
+        let newHTML = '';
+        let charIndex = 0;
+        
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = originalHTML;
+        const nodes = Array.from(tempDiv.childNodes);
+        
+        // Count total letters to distribute delay evenly within 1.0 seconds
+        let totalLetters = 0;
+        nodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                for (let char of node.textContent) {
+                    if (char.trim() !== '') totalLetters++;
+                }
+            }
+        });
+
+        const totalDuration = 1.0; // Total 1 second for all letters to start appearing
+        const delayStep = totalLetters > 0 ? totalDuration / totalLetters : 0.02;
+
+        nodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                for (let char of node.textContent) {
+                    if (char.trim() === '') {
+                        newHTML += char;
+                    } else {
+                        const delay = (charIndex * delayStep).toFixed(3);
+                        newHTML += `<span class="anim-letter" style="animation-delay: ${delay}s">${char}</span>`;
+                        charIndex++;
+                    }
+                }
+            } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'BR') {
+                newHTML += '<br>';
+            } else {
+                newHTML += node.outerHTML;
+            }
+        });
+        
+        headline.innerHTML = newHTML;
+        subheadline.classList.add('animate-sub');
+        if (heroCtas) {
+            heroCtas.classList.add('animate-ctas');
+        }
+    }
+
     // 1. MOBILE MENU TOGGLE
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
