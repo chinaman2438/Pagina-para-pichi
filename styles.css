@@ -1363,11 +1363,11 @@ img[src*="Certifications/"]:hover {
 
 /* Requisition-style Form */
 .form-container {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  background: #cadff5; /* More noticeable gray-blue background */
+  border: 1px solid #CBD5E1; /* Darker border */
   border-radius: 20px;
   padding: 3rem;
-  box-shadow: 0 4px 20px rgba(31, 44, 122, 0.02);
+  box-shadow: 0 10px 30px rgba(31, 44, 122, 0.08); /* More noticeable premium shadow */
 }
 
 @media (max-width: 500px) {
@@ -1411,12 +1411,12 @@ img[src*="Certifications/"]:hover {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  border: 1px solid var(--border-color);
+  border: 1px solid #94A3B8; /* Darker, more noticeable border */
   border-radius: 10px;
   padding: 12px 16px;
   font-size: 15px;
   color: var(--text-primary);
-  background: var(--bg-primary);
+  background: #FFFFFF; /* High contrast white background for the input fields */
   font-family: inherit;
   transition: all 0.3s ease;
 }
