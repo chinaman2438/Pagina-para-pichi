@@ -275,18 +275,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (searchInput && suggestionsContainer) {
         const products = [
-            { name: 'Biobsorb', url: 'biobsorb.html', category: 'Osteonic' },
-            { name: 'Craniorehab', url: 'craniorehab.html', category: 'Craniorehab' },
-            { name: 'Mandíbula', url: 'mandibula.html', category: 'Osteonic' },
-            { name: 'Maxilofacial', url: 'maxilofacial.html', category: 'Osteonic' },
-            { name: 'Neuro', url: 'neuro.html', category: 'Osteonic' },
-            { name: 'Signex 3.5', url: 'signex-3-5.html', category: 'Osteonic' },
-            { name: 'Signex 5.0', url: 'signex-5-0.html', category: 'Osteonic' },
-            { name: 'Signex Canulado', url: 'signex-canulado.html', category: 'Osteonic' },
-            { name: 'Signex Mano', url: 'signex-mano.html', category: 'Osteonic' },
-            { name: 'Signex Pie', url: 'signex-pie.html', category: 'Osteonic' },
-            { name: 'Signex Radio Distal', url: 'signex-radio-distal.html', category: 'Osteonic' },
-            { name: 'Su-por', url: 'su-por.html', category: 'Su-Por®' }
+            { name: 'Biobsorb', url: 'https://osteonic.com/spain/_products/biodegradable_cmf.php', category: 'Osteonic' },
+            { name: 'Mandíbula', url: 'https://osteonic.com/spain/_products/mandible_plating.php', category: 'Osteonic' },
+            { name: 'Maxilofacial', url: 'https://osteonic.com/spain/_products/maxillofacial_plating.php', category: 'Osteonic' },
+            { name: 'Neuro', url: 'https://osteonic.com/spain/_products/neuro_plating.php', category: 'Osteonic' },
+            { name: 'Signex 3.5', url: 'https://osteonic.com/spain/_products/universal3.php', category: 'Osteonic' },
+            { name: 'Signex 5.0', url: 'https://osteonic.com/spain/_products/universal5.php', category: 'Osteonic' },
+            { name: 'Signex Canulado', url: 'https://osteonic.com/spain/_products/cannulated_screw.php', category: 'Osteonic' },
+            { name: 'Signex Mano', url: 'https://osteonic.com/spain/_products/hand_plating.php', category: 'Osteonic' },
+            { name: 'Signex Pie', url: 'https://osteonic.com/spain/_products/foot_plating.php', category: 'Osteonic' },
+            { name: 'Signex Radio Distal', url: 'https://osteonic.com/spain/_products/wrist_plating.php', category: 'Osteonic' },
+            { name: 'Implantes Craneales', url: 'https://poriferous.com/cranial-implants-porous-polyethylene/', category: 'Su-Por®' },
+            { name: 'Implantes Orbitales', url: 'https://poriferous.com/orbital-implants-porous-polyethylene/', category: 'Su-Por®' },
+            { name: 'Implantes Faciales', url: 'https://poriferous.com/facial-implants-porous-polyethylene/', category: 'Su-Por®' },
+            { name: 'Sistema DynaCleft', url: 'https://www.craniorehab.com/dynacleft', category: 'Craniorehab' },
+            { name: 'Sistema nPlane', url: 'https://www.craniorehab.com/nplane', category: 'Craniorehab' },
+            { name: 'Sistema OraMPA', url: 'https://www.craniorehab.com/orampa', category: 'Craniorehab' },
+            { name: 'Sistema OraStretch', url: 'https://www.craniorehab.com/orastretch', category: 'Craniorehab' }
         ];
 
         function removeAccents(str) {
@@ -321,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     `;
                     item.addEventListener('click', (e) => {
                         e.stopPropagation();
-                        window.location.href = product.url;
+                        window.open(product.url, '_blank');
                     });
                     suggestionsContainer.appendChild(item);
                 });
