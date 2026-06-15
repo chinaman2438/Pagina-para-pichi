@@ -55,6 +55,19 @@ document.addEventListener('DOMContentLoaded', function () {
         if (heroCtas) {
             heroCtas.classList.add('animate-ctas');
         }
+
+        const heroRight = document.querySelector('.hero-right');
+        if (heroRight) {
+            heroRight.removeAttribute('style');
+            heroRight.classList.remove('fade-in-up');
+            heroRight.classList.add('animate-hero');
+        }
+        const brandSelector = document.querySelector('.hero-brand-selector');
+        if (brandSelector) {
+            brandSelector.removeAttribute('style');
+            brandSelector.classList.remove('fade-in-up');
+            brandSelector.classList.add('animate-brands');
+        }
     }
 
     // 1. MOBILE MENU TOGGLE

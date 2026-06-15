@@ -237,7 +237,7 @@ h2 {
   align-items: center;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1850px) {
   .nav-logo {
     position: absolute;
     left: 4rem; /* Pushes the logo all the way to the left */
@@ -493,6 +493,34 @@ h2 {
   }
 }
 
+.hero-right.animate-hero {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: revealHeroRight 0.8s forwards cubic-bezier(0.16, 1, 0.3, 1);
+  animation-delay: 0.9s; /* Starts at the same time as the subheadline */
+}
+
+@keyframes revealHeroRight {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-brand-selector.animate-brands {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: revealHeroBrands 0.8s forwards cubic-bezier(0.16, 1, 0.3, 1);
+  animation-delay: 1.4s; /* Starts at the same time as the CTAs */
+}
+
+@keyframes revealHeroBrands {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ==========================================================================
    Hero Search Bar & Navbar Search Styling
    ========================================================================== */
@@ -513,7 +541,7 @@ h2 {
   width: 100%;
 }
 
-@media (max-width: 1299px) and (min-width: 901px) {
+@media (max-width: 1849px) and (min-width: 901px) {
   .nav-search-wrapper {
     margin-left: 2rem; /* Maintain padding when logo returns to in-flow block layout */
     max-width: 520px;
