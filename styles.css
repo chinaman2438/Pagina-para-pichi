@@ -1027,6 +1027,42 @@ h2 {
   transform: scale(1.4); /* Grow to normal size when active */
 }
 
+@media (max-height: 820px) and (min-width: 901px) {
+  .hero {
+    padding-top: 90px;
+    padding-bottom: 20px;
+  }
+  .hero-container {
+    margin-bottom: 1rem;
+    gap: 2rem;
+  }
+  .hero-scene {
+    height: 400px;
+    max-width: 450px;
+  }
+  .card-secondary-1 {
+    height: 160px;
+  }
+  .card-secondary-2 {
+    height: 176px;
+  }
+  .hero-subheadline {
+    margin: 1rem 0 1.5rem;
+  }
+  .hero-brand-selector {
+    padding-top: 1rem;
+    gap: 0.75rem;
+  }
+  .brand-tabs {
+    border-radius: 20px;
+  }
+  .brand-tab {
+    height: 48px;
+    width: 130px;
+    padding: 6px 12px;
+  }
+}
+
 @media (max-width: 900px) {
   .nav-search-wrapper {
     margin-left: 1.5rem;
